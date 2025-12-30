@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Acerte o número</title>
 </head>
 <body>
@@ -10,11 +11,13 @@
         <h1>
             Acerte o número
         </h1>
-        <div>
+        <div class="input-numero">
             <label for="numero-palpite">Informe o número para o palpite!</label>
             <input type="number" name="numero-palpite" id="numero-informado">
-            <button onclick="alertaNumero()">confirmar</button>
-            <button onclick="numeroAleatorio()">veja o número</button>
+        </div>
+        <div class="div-botoes">
+                <button onclick="alertaNumero()">confirmar</button>
+                <button onclick="numeroAleatorio()">veja o número</button>
         </div>
     </main>
     <script  src="script/script.js"></script
