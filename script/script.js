@@ -14,7 +14,7 @@ function alertaNumero(){
 
 // criando a lógica do número aleátorio com math random e floor
 function numeroAleatorio(){
-    let numeroEscolhido =  Math.floor(Math.random() * 4 + 1)
+    let numeroEscolhido =  Math.floor(Math.random() * 9 + 1)
 
     if(numeroInformado.value == numeroEscolhido){
         return alert (`Parabéns!! Você acertou o número: ${numeroEscolhido} `)
