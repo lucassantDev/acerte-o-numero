@@ -1,4 +1,5 @@
 // material de apoio: https://www.freecodecamp.org/news/javascript-math-random-method-explained/
+//https://pt.stackoverflow.com/questions/52418/como-limpar-campos-de-formulario-html
 
 const numeroInformado = document.getElementById('numero-informado')
 
@@ -17,9 +18,16 @@ function numeroAleatorio(){
     let numeroEscolhido =  Math.floor(Math.random() * 9 + 1)
 
     if(numeroInformado.value == numeroEscolhido){
-        return alert (`Parabéns!! Você acertou o número: ${numeroEscolhido} `)
+        alert (`Parabéns!! Você acertou o número: ${numeroEscolhido} `)
+        numeroInformado.value = ''
+    }else if(numeroInformado.value == ''){
+        alert('Você não informou nenhum número')
+    }else if(numeroInformado.value > 10){
+        alert(`O número ${numeroInformado.value} é maior que 10! Informe um número entre 1 e 10`)
+        numeroInformado.value = ''
     }else{
-        return alert(`Não foi dessa vez! O número sorteado foi: ${numeroEscolhido}`)
+        alert(`Não foi dessa vez! O número sorteado foi: ${numeroEscolhido}`)
+        numeroInformado.value = ''
     }
         
 }
